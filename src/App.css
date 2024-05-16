@@ -36,3 +36,53 @@
     transform: rotate(360deg);
   }
 }
+
+.dashboard {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.container {
+  max-width: 500px !important;
+}
+
+.custom-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.custom-input input {
+  width: calc(100% - 40px); 
+  padding-left: 30px;
+  border: none;
+  border-bottom: 1px solid #ccc; 
+  outline: none;
+}
+
+.custom-input .icon {
+  z-index: 10;    
+  margin-right: -20px; 
+}
+
+.custom-input .icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.custom-input .error {
+  position: absolute;
+  left: 9%; 
+  bottom: -20px; 
+  width: 100%;
+}
+
