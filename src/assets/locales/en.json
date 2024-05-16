@@ -4,6 +4,7 @@
     "emailError" : "Please enter a valid email address.",
     "password" : "Enter Password",
     "passwordError": "Please enter a password",
-    "forgotPassword" : "Forgot Password?"
+    "forgotPassword" : "Forgot Password?",
+    "logout": "Logout"
 }
   

@@ -4,10 +4,12 @@ import { useNavigate } from "react-router-dom";
 import { InfinitySpin } from "react-loader-spinner";
 import axios from 'axios';
 import '../App.css'
+import { useTranslation } from 'react-i18next';
 
 const Dashboard = () => {
   	const navigate = useNavigate();
   	const [imageUrl, setImageUrl] = useState('');
+	const { t } = useTranslation();
 
   	useEffect(() => {
     	axios.get('https://dog.ceo/api/breeds/image/random')
@@ -27,7 +29,7 @@ const Dashboard = () => {
 		<div className="dashboard">
 			<div className="position-absolute mx-auto top-0 end-0 p-4">
 				<div className="custom-input">
-					<button className='btn btn-danger' onClick={logout}> Logout </button>
+					<button className='btn btn-danger' onClick={logout}> {t('logout')} </button>
 				</div>
 			</div>
 			{!imageUrl && (
