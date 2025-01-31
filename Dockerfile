@@ -12,7 +12,7 @@ RUN $(npm bin)/ng build --aot --configuration production
 
 FROM nginx:alpine
 
-COPY --from=builder /usr/src/cumi-web/dist/cumi-web /usr/share/nginx/html/cumi-web
+COPY --from=builder /usr/src/cumi-web/dist/cumi-web:4.3.2 /usr/share/nginx/html/cumi-web
 
 RUN rm -rf /etc/nginx/conf.d/default.conf
 
